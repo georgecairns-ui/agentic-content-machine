@@ -1,4 +1,4 @@
-# Marketing notes: Content Machine OS
+# Marketing notes: Agentic Content Machine
 
 ## In one sentence
 

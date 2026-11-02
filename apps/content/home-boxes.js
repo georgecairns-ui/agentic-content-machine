@@ -1,8 +1,8 @@
 /*
-  CONTENT MACHINE OS ON HOME: the boxes this tool adds to the Home dashboard
+  AGENTIC CONTENT MACHINE ON HOME: the boxes this tool adds to the Home dashboard
   -------------------------------------------------------------------------
   Loaded by apps/home/home.js after app/model.js (listed under "home" in the tool's menu file). It reads the same data
-  file as the app itself, through the same shared store. The boxes start switched on when Content Machine OS is on its own, and off when Task List OS is in the
+  file as the app itself, through the same shared store. The boxes start switched on when Agentic Content Machine is on its own, and off when Agentic Task List is in the
   folder, so attaching never changes someone's Home: the person switches boxes on from Home's list.
 */
 (function () {
@@ -14,7 +14,7 @@
   const STYLE_ID = "cm-home-style";
   let data = null;
 
-  // Boxes start switched on only when Content Machine OS is on its own. When Task List OS is in the folder
+  // Boxes start switched on only when Agentic Content Machine is on its own. When Agentic Task List is in the folder
   // (its Home scripts load first and set window.TL), they start off, so attaching never changes
   // someone's Home. Home reads this once, when it first builds the layout.
   function startOn() { return !window.TL; }

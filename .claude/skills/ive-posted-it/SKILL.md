@@ -1,6 +1,6 @@
 ---
 name: ive-posted-it
-description: Records in Content Machine OS that the person has posted something, so it shows as posted on the calendar and in the Health check. Sets the posted time, and the link if they give one, on the right post and platform. Use when they say "I've posted it", "that's gone out", "done, it's live", "I put the Instagram one up" or "posted the LinkedIn one".
+description: Records in Agentic Content Machine that the person has posted something, so it shows as posted on the calendar and in the Health check. Sets the posted time, and the link if they give one, on the right post and platform. Use when they say "I've posted it", "that's gone out", "done, it's live", "I put the Instagram one up" or "posted the LinkedIn one".
 ---
 
 # I've posted it
@@ -22,7 +22,7 @@ The person has posted something themselves. You record it. You don't post anythi
 6. If the post was only drafted (they posted before approving), that's their call: mark it posted, and set `approvedAt` too if it was empty. Say so in one line.
 7. Set `updatedAt`. Add a line to `activity` at the front ("Posted to Instagram: 'Before and after'"), keeping no more than 200.
 8. Save safely: read the file right before writing, write the whole file back, read it back and check it parses.
-9. If Task List OS is attached and had a task for it, don't edit the task list. Tell them to tick it there.
+9. If Agentic Task List is attached and had a task for it, don't edit the task list. Tell them to tick it there.
 
 ## What to say back
 

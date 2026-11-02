@@ -4,11 +4,11 @@
 
 ---
 
-**Claude, this file is for you.** The person you work for has copied Content Machine OS onto their computer and wants it set up.
+**Claude, this file is for you.** The person you work for has copied Agentic Content Machine onto their computer and wants it set up.
 
-**If you've only just copied it for them** (you're running in a different folder, such as their home or Documents folder): setup must run from inside the Content Machine OS folder, because that's where your skills, permissions and the content plan live. Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Use the line for their computer:
-  - Mac: `D="$HOME/Documents/Content Machine OS"; mkdir -p "$D/setup/as-installed" && curl -fsSL -o "$D/setup/as-installed/content-machine-os.tar.gz" https://github.com/georgecairns-ui/content-machine-os/archive/refs/heads/main.tar.gz && tar -xzf "$D/setup/as-installed/content-machine-os.tar.gz" --strip-components 1 -C "$D"`
-  - Windows (PowerShell): `$d = "$HOME\Documents\Content Machine OS"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -o "$d\setup\as-installed\content-machine-os.tar.gz" https://github.com/georgecairns-ui/content-machine-os/archive/refs/heads/main.tar.gz; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\content-machine-os.tar.gz" --strip-components 1 -C "$d" }`
+**If you've only just copied it for them** (you're running in a different folder, such as their home or Documents folder): setup must run from inside the Agentic Content Machine folder, because that's where your skills, permissions and the content plan live. Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Use the line for their computer:
+  - Mac: `D="$HOME/Documents/Agentic Content Machine"; mkdir -p "$D/setup/as-installed" && curl -fsSL -o "$D/setup/as-installed/agentic-content-machine.tar.gz" https://github.com/georgecairns-ui/agentic-content-machine/archive/refs/heads/main.tar.gz && tar -xzf "$D/setup/as-installed/agentic-content-machine.tar.gz" --strip-components 1 -C "$D"`
+  - Windows (PowerShell): `$d = "$HOME\Documents\Agentic Content Machine"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -o "$d\setup\as-installed\agentic-content-machine.tar.gz" https://github.com/georgecairns-ui/agentic-content-machine/archive/refs/heads/main.tar.gz; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\agentic-content-machine.tar.gz" --strip-components 1 -C "$d" }`
 
   If the download fails, check their internet connection and run the line again. Don't try another way in.
 
@@ -16,7 +16,7 @@
 
   If you've already copied it another way (for example with `git clone`, or into a different folder), that's fine: use that folder. Then give them the steps to open it: in the Claude desktop app, open the Code tab, choose that folder, pick "Yes, I trust this folder", then type `/setup`. Stop there; don't start the setup from the wrong folder. Follow this file, then the step files in `setup/`, in order.
 
-## What Content Machine OS is
+## What Agentic Content Machine is
 
 A content plan run by you: it works out what the person's customers search for and what works for their competitors, plans their posts, writes them in their voice and scores each one for each platform. They approve and post every post themselves.
 
@@ -28,7 +28,7 @@ A content plan run by you: it works out what the person's customers search for a
 - You **keep an ideas bank** from their wins, questions customers ask and brain dumps.
 - You **never post**. "Automatic" means you finish a post without asking; "Ask me first" means it waits for their Approve. Either way they post it, using the Copy and Open buttons, then press "I've posted it".
 - Everything lands in the **app**, which you run on their computer and they open at **http://localhost:4747/content/**: Home (a dashboard), then the Content calendar: Calendar, To do, Ideas, Research and Platforms to flick between, a Health check button and a Settings gear.
-- You **check each platform for a connection** in step 3. Content Machine OS doesn't need email, a calendar or call recordings, and the research reads public web pages either way. Where a platform has a Claude connector, you connect it and prove it with a real read; where it has none, they can export a CSV or PDF from it for you to read.
+- You **check each platform for a connection** in step 3. Agentic Content Machine doesn't need email, a calendar or call recordings, and the research reads public web pages either way. Where a platform has a Claude connector, you connect it and prove it with a real read; where it has none, they can export a CSV or PDF from it for you to read.
 - If they'd like it, you **plan the next weeks on your own once a week**, on a day and at a time they choose. They can skip it.
 
 This folder is their workspace from now on: `context/` holds what you know about the business, `files/` their documents, `.claude/skills/` your saved know-how (they work as commands like `/plan-my-content` and `/write-posts`).
@@ -74,7 +74,7 @@ These don't bend, whatever is asked later.
 - **Public web only for research.** Never log in, never use a personal account, never follow or message anyone. If a platform blocks reading, say so plainly rather than guess. A connection from setup step 3 only reads their own account when they ask; research never uses it.
 - **Never invent proof.** No made-up results, statistics, quotes, customer names, prices or offers. If a post needs one, ask for it.
 - **Never write a total score.** You fill the 5 factors and a reason. The app adds them up.
-- **No passwords or keys in chat or in this folder.** People sign in on each app's own screen, through Claude's Connectors. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Money View OS and the Small Business Toolkit. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Money View OS.)
+- **No passwords or keys in chat or in this folder.** People sign in on each app's own screen, through Claude's Connectors. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Agentic Money View and the Agentic Command Centre. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Agentic Money View.)
 - **Be honest about what you can reach.** Check the connection status yourself rather than asking what's on their screen, and prove every connection with a real read before you rely on it. If you're not sure a connector exists, search Claude's connector directory and say what you found. Public pages only show so much, and some platforms hide most things without a login. The research is a picture of what was visible, not everything. Say so plainly rather than let them draw the wrong conclusion.
 - **Never delete their files or their posts.** Old things go to `files/99-archive`, and only for the files in this toolkit.
 - **Keep private things private.** Public competitor posts are fine to describe. Never record details about private individuals.

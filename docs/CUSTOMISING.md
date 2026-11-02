@@ -1,6 +1,6 @@
 # Make it yours
 
-Content Machine OS comes with a clean, calm look in light or dark (the moon or sun button at the top switches), but it's your workspace. During setup Claude offers to use your own colours, font and logo; you can ask again any time ("make it match my brand"). The easiest way to change anything is to ask Claude, for example:
+Agentic Content Machine comes with a clean, calm look in light or dark (the moon or sun button at the top switches), but it's your workspace. During setup Claude offers to use your own colours, font and logo; you can ask again any time ("make it match my brand"). The easiest way to change anything is to ask Claude, for example:
 
 - "Make the app use our brand colours: navy and orange."
 - "Add a theme called 'Behind the scenes'."

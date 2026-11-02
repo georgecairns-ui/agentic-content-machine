@@ -4,13 +4,13 @@ Plain answers to the questions people ask before running the research.
 
 ## Where is my information kept?
 
-In this folder on your computer. Content Machine OS has no account, no server and no database. Your plan (your platforms, research, ideas and posts) is one file, `apps/content/data/content.json`. Claude's notes about your business are in `context/`. You can open, read and edit all of it yourself.
+In this folder on your computer. Agentic Content Machine has no account, no server and no database. Your plan (your platforms, research, ideas and posts) is one file, `apps/content/data/content.json`. Claude's notes about your business are in `context/`. You can open, read and edit all of it yourself.
 
 If this folder sits inside Google Drive, OneDrive or Dropbox, it's backed up there like any other folder. If that folder is shared with other people, they can read your plan and notes too, so keep it in a private part of your drive.
 
 ## Where do my photos and videos go?
 
-When you add a photo or video to a post (by dragging it from a folder onto the post, or with the Add from your computer button), a copy is saved in `apps/content/data/media/` inside this folder, on your computer. Your plan file only lists their names. Nothing is uploaded anywhere, and they're never part of the Content Machine OS download.
+When you add a photo or video to a post (by dragging it from a folder onto the post, or with the Add from your computer button), a copy is saved in `apps/content/data/media/` inside this folder, on your computer. Your plan file only lists their names. Nothing is uploaded anywhere, and they're never part of the Agentic Content Machine download.
 
 "Remove from post" only takes the picture off that post. The file stays in the media folder, and nothing in the app can delete it. If you want a file gone, delete it in the folder yourself. The app only saves pictures and videos (JPG, PNG, WebP, GIF, MP4, MOV and WebM, up to 200 MB each) and never replaces a file that's already there.
 
@@ -40,11 +40,11 @@ It's told never to invent a result, a number, a statistic, a customer's words or
 
 ## What about the skill Claude builds about my business?
 
-It's a small file about your audience and your industry, saved in `.claude/skills/` and in `skills-to-upload/`. It stays on your computer. If you add it to the Claude app, it goes into your own Claude account, and it's yours alone. It's never part of the Content Machine OS download.
+It's a small file about your audience and your industry, saved in `.claude/skills/` and in `skills-to-upload/`. It stays on your computer. If you add it to the Claude app, it goes into your own Claude account, and it's yours alone. It's never part of the Agentic Content Machine download.
 
 ## What about passwords and keys?
 
-Content Machine OS doesn't need a sign-in to work. It never asks for a password or a key, and none should ever go into this folder or into the chat. If a platform you post on has a Claude connector, setup can connect it through Claude's Connectors: you sign in on the platform's own page, never in the chat or in this folder, and Claude only reads it, never posts. If a platform has no Claude connector, Claude reads a CSV or PDF export of it instead: you drop the export in the files folder and Claude reads it whenever you ask.
+Agentic Content Machine doesn't need a sign-in to work. It never asks for a password or a key, and none should ever go into this folder or into the chat. If a platform you post on has a Claude connector, setup can connect it through Claude's Connectors: you sign in on the platform's own page, never in the chat or in this folder, and Claude only reads it, never posts. If a platform has no Claude connector, Claude reads a CSV or PDF export of it instead: you drop the export in the files folder and Claude reads it whenever you ask.
 
 ## Does it send anything anywhere?
 
@@ -56,11 +56,11 @@ Only if you choose the weekly plan during setup; you can skip it. Then the Claud
 
 ## What is the helper?
 
-Your app runs from a small program in your Content Machine OS folder, so it opens like a web page at http://localhost:4747. It only listens on your own computer: nothing on the internet or your network can reach it. It only shows the app and only ever saves your plan file (keeping a backup before every save) and the photos and videos you add to posts, which it never replaces or deletes. When you press Plan, Refresh research or Ask Claude in the app, it can start Claude Code on your computer to do that one job, and only when the app itself asks.
+Your app runs from a small program in your Agentic Content Machine folder, so it opens like a web page at http://localhost:4747. It only listens on your own computer: nothing on the internet or your network can reach it. It only shows the app and only ever saves your plan file (keeping a backup before every save) and the photos and videos you add to posts, which it never replaces or deletes. When you press Plan, Refresh research or Ask Claude in the app, it can start Claude Code on your computer to do that one job, and only when the app itself asks.
 
 ## Who sees my information?
 
-You, and Claude while you're working with it. Your conversations with Claude are covered by your Claude account's privacy settings, which you can check in the Claude app. Get AI Powers, who made Content Machine OS, can't see your folder or your plan.
+You, and Claude while you're working with it. Your conversations with Claude are covered by your Claude account's privacy settings, which you can check in the Claude app. Get AI Powers, who made Agentic Content Machine, can't see your folder or your plan.
 
 ## The approve button
 

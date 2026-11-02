@@ -1,6 +1,6 @@
 ---
 name: write-posts
-description: Writes the words for posts in Content Machine OS, in the person's own voice and shaped for each platform, then scores each platform out of 10 with 5 simple factors and says what Claude needs from them (a photo, a video, a case study). Never posts anything. Use when the app asks for a post to be written or changed (a post with a request), or when they say "write my waiting posts", "write this up", "write this post", "make it shorter", "change this post", "rewrite it" or "try it again".
+description: Writes the words for posts in Agentic Content Machine, in the person's own voice and shaped for each platform, then scores each platform out of 10 with 5 simple factors and says what Claude needs from them (a photo, a video, a case study). Never posts anything. Use when the app asks for a post to be written or changed (a post with a request), or when they say "write my waiting posts", "write this up", "write this post", "make it shorter", "change this post", "rewrite it" or "try it again".
 ---
 
 # Write posts

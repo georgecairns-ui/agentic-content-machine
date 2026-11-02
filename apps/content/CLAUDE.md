@@ -1,6 +1,6 @@
 # Content Machine: standing instructions for Claude
 
-This folder is the content app inside Content Machine OS. You (Claude) and the app share one file, `data/content.json`. The person sees it as one page, the Content calendar, with a row of views to flick between at the top: Calendar (month and week, with drag and drop), To do (everything waiting on them), Ideas, Research and Platforms, plus a Health check button and a gear for Settings. You research what their customers search for and what works for their competitors, plan the posts, write them in their voice and score each one for each platform. They approve, and they post. Read this file every time you work with the content plan.
+This folder is the content app inside Agentic Content Machine. You (Claude) and the app share one file, `data/content.json`. The person sees it as one page, the Content calendar, with a row of views to flick between at the top: Calendar (month and week, with drag and drop), To do (everything waiting on them), Ideas, Research and Platforms, plus a Health check button and a gear for Settings. You research what their customers search for and what works for their competitors, plan the posts, write them in their voice and score each one for each platform. They approve, and they post. Read this file every time you work with the content plan.
 
 The app runs at **http://localhost:4747/content/**, served by a small helper on this computer (`apps/server/`, started by `.claude/skills/open-the-app`). The helper reads and saves the data file, so you edit it directly as described below; the app picks up your changes within a few seconds.
 
@@ -117,8 +117,8 @@ It can show the plan, move posts between days, let the person edit the words, ad
 
 ## Working with other tools
 
-- **Task List OS** (when `apps/installed.json` has `task-list`): see `ATTACH-CLAUDE.md` for what lands there and how. It needs the person's click there before anything happens.
-- **Pipeline OS** (`pipeline`): read `apps/pipeline/data/pipeline.json` for deals in the `won` stage. Each new win becomes an idea (`source: "pipeline"`) and a case-study need. Read only: never edit a deal.
+- **Agentic Task List** (when `apps/installed.json` has `task-list`): see `ATTACH-CLAUDE.md` for what lands there and how. It needs the person's click there before anything happens.
+- **Agentic Pipeline** (`pipeline`): read `apps/pipeline/data/pipeline.json` for deals in the `won` stage. Each new win becomes an idea (`source: "pipeline"`) and a case-study need. Read only: never edit a deal.
 - If a tool isn't attached, skip that part quietly.
 
 ## If something goes wrong

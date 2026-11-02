@@ -20,4 +20,4 @@ If the menus look different, ask Claude: "Where do I upload a skill?"
 |---|---|
 | (Claude fills this in during setup) | |
 
-Refresh your research and Claude updates the skill and packs it up again. Your skill and its zip never ship with Content Machine OS: they're about your business only.
+Refresh your research and Claude updates the skill and packs it up again. Your skill and its zip never ship with Agentic Content Machine: they're about your business only.
