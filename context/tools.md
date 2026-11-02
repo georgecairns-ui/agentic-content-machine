@@ -2,7 +2,7 @@
 
 Status: not filled in yet
 
-<!-- Claude: fill in "Your setup" during setup step 1 (setup/05-get-to-know-the-business.md). Content Machine OS's research reads public web pages only. Setup step 3 (setup/content-02-your-platforms.md) connects a platform only where Claude has a connector for it, and only to read; fill "Connected apps" from that, and list a platform with no connector under "Apps that aren't connected" with its export. Never write passwords, keys or codes in this file or anywhere in this folder. -->
+<!-- Claude: fill in "Your setup" during setup step 1 (setup/05-get-to-know-the-business.md). Agentic Content Machine's research reads public web pages only. Setup step 3 (setup/content-02-your-platforms.md) connects a platform only where Claude has a connector for it, and only to read; fill "Connected apps" from that, and list a platform with no connector under "Apps that aren't connected" with its export. Never write passwords, keys or codes in this file or anywhere in this folder. -->
 
 ## Your setup
 

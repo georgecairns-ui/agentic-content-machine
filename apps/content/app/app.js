@@ -1,5 +1,5 @@
 /*
-  CONTENT MACHINE OS: the app
+  AGENTIC CONTENT MACHINE: the app
   ---------------------------
   Ties everything together:
   1. Connects to data/content.json through the shared store.
@@ -79,7 +79,7 @@
     gate.innerHTML = html;
   }
   function gateCard(eyebrow, title, body, actions) {
-    return '<div class="gate__card"><div class="gate__text"><div class="gate__brand"><img src="../shared/images/claude-icon.png" alt="" width="28" height="28"><span>Content Machine OS</span></div>' +
+    return '<div class="gate__card"><div class="gate__text"><div class="gate__brand"><img src="../shared/images/claude-icon.png" alt="" width="28" height="28"><span>Agentic Content Machine</span></div>' +
       (eyebrow ? '<span class="label">' + esc(eyebrow) + "</span>" : "") + "<h1>" + esc(title) + "</h1>" + body +
       (actions ? '<div class="gate__actions">' + actions + "</div>" : "") + '</div><div class="gate__art"><img src="' + C.ART.welcome + '" alt="" width="440" height="440"></div></div>';
   }
@@ -89,7 +89,7 @@
     }
     if (status === "needs-helper") {
       return showGate(gateCard("", "Your content machine opens from Claude.",
-        "<p>Claude runs it on this computer and gives you a link. In Claude Code, in your Content Machine OS folder, just say:</p>" + C.say("Open my content machine") +
+        "<p>Claude runs it on this computer and gives you a link. In Claude Code, in your Agentic Content Machine folder, just say:</p>" + C.say("Open my content machine") +
         "<p class=\"gate__note\">Not set up yet? Say <strong>/setup</strong> instead.</p>",
         '<button type="button" class="link-btn" data-action="connect">Or connect the folder yourself in Chrome</button>'));
     }
@@ -98,7 +98,7 @@
     }
     if (status === "needs-connect") {
       return showGate(gateCard("One-time setup", "Connect your content machine.",
-        "<p>Choose your <strong>Content Machine OS</strong> folder, the one with START-HERE.md in it, then click <strong>Allow</strong> when Chrome asks. Nothing leaves your computer.</p>",
+        "<p>Choose your <strong>Agentic Content Machine</strong> folder, the one with START-HERE.md in it, then click <strong>Allow</strong> when Chrome asks. Nothing leaves your computer.</p>",
         '<button type="button" class="btn btn--primary btn--lg" data-action="connect">' + icon("folder") + "Connect your folder</button>"));
     }
     if (status === "needs-permission") {
@@ -259,7 +259,7 @@
     }
     state.rendered = id;
     $("#viewSub").textContent = M.isSetUp(data) ? view.line(ctx) : "Let’s set up your content machine";
-    document.title = view.title + " · Content Machine OS";
+    document.title = view.title + " · Agentic Content Machine";
   }
 
   // Moving to a page adds an entry to the browser's history, so Back returns to the page before.
@@ -350,7 +350,7 @@
     const btn = e.target.closest("[data-action]");
     if (!btn) return;
     switch (btn.getAttribute("data-action")) {
-      case "connect": store.connect().catch(function (err) { ui.toast(err && err.kind === "wrong-folder" ? "That folder doesn't have a content file in it. Choose the Content Machine OS folder." : "Couldn't connect that folder. Please try again.", { icon: "alert", duration: 6000 }); }); break;
+      case "connect": store.connect().catch(function (err) { ui.toast(err && err.kind === "wrong-folder" ? "That folder doesn't have a content file in it. Choose the Agentic Content Machine folder." : "Couldn't connect that folder. Please try again.", { icon: "alert", duration: 6000 }); }); break;
       case "reconnect": store.reconnect(); break;
       case "retry": store.retry(); break;
       case "settings": Settings.open(); break;

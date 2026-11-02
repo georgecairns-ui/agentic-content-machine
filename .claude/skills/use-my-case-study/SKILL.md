@@ -1,6 +1,6 @@
 ---
 name: use-my-case-study
-description: Turns a customer story or finished job into posts for the right platforms in the person's voice, asks for a photo if there isn't one, and answers any open case-study request waiting in Content Machine OS. Never makes up a result, a quote or a customer. Use when they say "here's a case study", "write up this job", "tell the story of the Clifton job", "use this review", or when a post has a case-study need that has been answered.
+description: Turns a customer story or finished job into posts for the right platforms in the person's voice, asks for a photo if there isn't one, and answers any open case-study request waiting in Agentic Content Machine. Never makes up a result, a quote or a customer. Use when they say "here's a case study", "write up this job", "tell the story of the Clifton job", "use this review", or when a post has a case-study need that has been answered.
 ---
 
 # Use my case study

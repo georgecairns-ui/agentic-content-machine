@@ -221,7 +221,7 @@
         '<input type="file" multiple accept="image/*,video/*" hidden data-media-input aria-label="Choose photos and videos"></div>' +
       '<div data-notices>' + noticesHtml() + '</div><div data-uploads>' + uploadsHtml(post.id) + "</div>" +
       (list.length ? '<ul class="mgrid" data-media-grid>' + list.map(function (m, i) { return mediaTile(post, m, i); }).join("") + "</ul>" +
-        '<p class="drawer__small muted">Drag to change the order. The first photo is the cover. Remove from post only takes it off this post: the file stays in the media folder inside Content Machine OS on this computer.</p>' :
+        '<p class="drawer__small muted">Drag to change the order. The first photo is the cover. Remove from post only takes it off this post: the file stays in the media folder inside Agentic Content Machine on this computer.</p>' :
         '<p class="drawer__small muted">Nothing added yet. The first photo you add becomes the cover and shows on the calendar.</p>') +
       '<div class="drawer__row" data-ticks>' + tickOffers(post) + "</div></div>";
   }

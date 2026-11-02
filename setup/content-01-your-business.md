@@ -1,6 +1,6 @@
 # Step 2 of 6: your business, your voice and what you want to be known for (required)
 
-Goal: you know what the business sells, the problems it solves for customers, what makes it different, who its customers are and where it works, and you have 3 to 5 themes to plan posts around. **Content Machine OS can't research or plan without this.** It's what you search for, what you write about and how you tell a useful post from a generic one. So this step is required: setup doesn't go past it until questions 1 to 3 are answered.
+Goal: you know what the business sells, the problems it solves for customers, what makes it different, who its customers are and where it works, and you have 3 to 5 themes to plan posts around. **Agentic Content Machine can't research or plan without this.** It's what you search for, what you write about and how you tell a useful post from a generic one. So this step is required: setup doesn't go past it until questions 1 to 3 are answered.
 
 ## 1. Work it out first
 
@@ -9,7 +9,7 @@ The person shouldn't start from a blank page. Before asking anything, quietly ga
 - `context/business.md`, now filled in from step 1. Reuse it. Never ask something it already answers.
 - Their **website**, if you can read web pages: services, who it's for, the town, case studies, how they describe themselves.
 - Their public pages and posts, if they gave you a link in step 1.
-- `context/sales.md`, if Pipeline OS is attached and it's filled in: what they sell, who to, the problems they solve.
+- `context/sales.md`, if Agentic Pipeline is attached and it's filled in: what they sell, who to, the problems they solve.
 
 Use what you find to draft answers. Mark anything you're unsure of "(my guess)".
 
@@ -34,7 +34,7 @@ If they still don't want to answer, stop here. Note it in `setup/progress.md` ("
 
 After each answer, save it, so nothing is lost if they stop:
 
-- `context/content.md`: one section per question, in their words. If it doesn't exist (Content Machine OS was attached to another tool's folder), create it from this tool's `context/content.md` template first. Change its status line to `Status: filled in on <date>`.
+- `context/content.md`: one section per question, in their words. If it doesn't exist (Agentic Content Machine was attached to another tool's folder), create it from this tool's `context/content.md` template first. Change its status line to `Status: filled in on <date>`.
 - `apps/content/data/content.json`: `settings.businessName`, `settings.ownerName`, and `settings.about` (`sells`, `problems` as a list of short phrases, `different`, `who`, `where`).
 - If `context/business.md` is still thin, add to it from the same answers. Never overwrite what's there.
 

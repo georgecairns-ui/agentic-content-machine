@@ -2,7 +2,7 @@
   TO DO: everything waiting on the owner
   --------------------------------------
   Needs (a photo, a case study), posts to check and approve, and approved posts to put out today.
-  The list itself comes from CM.model.todo, so Home and Task List OS read it the same way.
+  The list itself comes from CM.model.todo, so Home and Agentic Task List read it the same way.
   Claude never posts: the owner copies the words, opens the platform and ticks "I've posted it".
 */
 (function () {

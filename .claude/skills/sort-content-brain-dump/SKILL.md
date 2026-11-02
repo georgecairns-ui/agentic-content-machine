@@ -1,6 +1,6 @@
 ---
 name: sort-content-brain-dump
-description: Turns the content part of a brain dump (handed over by the shared sort-brain-dump skill, from the Brain dump button on any page) into content ideas, planned posts and updates in Content Machine OS - an idea, a win, a customer's kind words, a case study, "I've posted it", or "I've added the photo". Uses what the person said it's about as a strong hint. Used by sort-brain-dump; also use when the person pastes a messy note about their posts or content.
+description: Turns the content part of a brain dump (handed over by the shared sort-brain-dump skill, from the Brain dump button on any page) into content ideas, planned posts and updates in Agentic Content Machine - an idea, a win, a customer's kind words, a case study, "I've posted it", or "I've added the photo". Uses what the person said it's about as a strong hint. Used by sort-brain-dump; also use when the person pastes a messy note about their posts or content.
 ---
 
 # Sort a content brain dump
@@ -11,11 +11,11 @@ The person pressed **Brain dump**, talked or typed and pressed Done. You turn th
 
 - `apps/content/data/content.json` and `apps/content/CLAUDE.md` (the format and the rules).
 - `context/content.md` and `context/voice.md`.
-- When Task List OS is attached: `apps/task-list/CLAUDE.md`.
+- When Agentic Task List is attached: `apps/task-list/CLAUDE.md`.
 
 ## Where it comes from
 
-The shared skill `.claude/skills/sort-brain-dump` reads the note from `apps/home/data/braindump.json` and hands you its content part, with `about`: what the person picked under "What's it about?" (an idea or a post in this tool, or empty for "Let Claude decide"). Treat `about` as a strong hint, not a cage. Anything that isn't about content, hand back to `sort-brain-dump` for the right tool (or, if Task List OS is attached, add it there as a suggested task).
+The shared skill `.claude/skills/sort-brain-dump` reads the note from `apps/home/data/braindump.json` and hands you its content part, with `about`: what the person picked under "What's it about?" (an idea or a post in this tool, or empty for "Let Claude decide"). Treat `about` as a strong hint, not a cage. Anything that isn't about content, hand back to `sort-brain-dump` for the right tool (or, if Agentic Task List is attached, add it there as a suggested task).
 
 ## Steps
 
@@ -29,7 +29,7 @@ The shared skill `.claude/skills/sort-brain-dump` reads the note from `apps/home
    - **"I've posted it", "the Instagram one went out"**: follow `.claude/skills/ive-posted-it`.
    - **"I've added the photo", "the video's done"**: find the matching open need and set `done: true` (it's their word). Leave `answer` empty.
    - **A change to a post** ("make Thursday's one shorter"): set `request` to `{ "kind": "rewrite", "note": "<what they said>", "at": "<now>" }` on that post, then follow `.claude/skills/write-posts`.
-   - **A task that isn't content** ("renew the domain"): if Task List OS is attached, add a suggested task there with `source: { "type": "braindump", "from": "Your brain dump", "subject": "<what they said>", "ref": "<the brain dump note id>" }`. If it isn't, mention it in the summary.
+   - **A task that isn't content** ("renew the domain"): if Agentic Task List is attached, add a suggested task there with `source: { "type": "braindump", "from": "Your brain dump", "subject": "<what they said>", "ref": "<the brain dump note id>" }`. If it isn't, mention it in the summary.
    - **Nothing to do** (a thought, a worry): leave it and mention it in the summary.
 4. Add a line to `activity` at the front for each change ("From your brain dump: added the idea 'Winter drainage'"), keeping no more than 200.
 5. Tell `sort-brain-dump` in one plain line what you did, for the note's `summary`: "Added 2 ideas, planned the Clifton job for Thursday on LinkedIn and marked the café photo as done."

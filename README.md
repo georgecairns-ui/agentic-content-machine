@@ -1,14 +1,14 @@
-# Content Machine OS
+# Agentic Content Machine
 
 **A content plan that fills itself in, in your voice.** A free kit from [Get AI Powers](https://getaipowers.com), run by Claude.
 
-Most business owners know they should post. They stare at a blank page, post twice, then stop for 3 months. Content Machine OS asks you about your business once, then looks up what your customers search for and what your competitors do well, plans your posts on a calendar, and writes each one in your voice. Every post is scored out of 10 for each platform, so you can see where it's likely to do best.
+Most business owners know they should post. They stare at a blank page, post twice, then stop for 3 months. Agentic Content Machine asks you about your business once, then looks up what your customers search for and what your competitors do well, plans your posts on a calendar, and writes each one in your voice. Every post is scored out of 10 for each platform, so you can see where it's likely to do best.
 
-**Claude never posts for you.** You approve each post (or let Claude finish the ones you trust) and post it yourself: press Copy, press Open, paste, post, then tell it "I've posted it". Content Machine OS never posts, schedules, messages or follows anyone, and never logs in to anything except the read-only connections you set up in step 3, and nothing leaves your computer except what Claude looks up on public web pages.
+**Claude never posts for you.** You approve each post (or let Claude finish the ones you trust) and post it yourself: press Copy, press Open, paste, post, then tell it "I've posted it". Agentic Content Machine never posts, schedules, messages or follows anyone, and never logs in to anything except the read-only connections you set up in step 3, and nothing leaves your computer except what Claude looks up on public web pages.
 
 **See it first:** [a clickable demo with a made-up business](https://claude.ai/artifact/LLrFahQSW8gYtxkiFiabiy), opening on a month of planned posts.
 
-Content Machine OS is part of a toolkit of 7 free tools from Get AI Powers. The others (a task list, Pipeline OS, proposals and more) show in the app's menu, and Get AI Powers sets them up with you on a free call.
+Agentic Content Machine is part of a toolkit of 7 free tools from Get AI Powers. The others (a task list, Agentic Pipeline, proposals and more) show in the app's menu, and Get AI Powers sets them up with you on a free call.
 
 ## What happens when you type /setup
 
@@ -47,12 +47,12 @@ It's **yours to shape**: your platforms, your themes, how many posts a week, whe
 
 1. **Open the Claude desktop app and choose the Code tab.** Any folder will do for this first step.
 2. **Ask Claude to fetch the kit.** Paste this:
-   > Copy Content Machine OS from https://github.com/georgecairns-ui/content-machine-os into a folder called "Content Machine OS" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up.
+   > Copy Agentic Content Machine from https://github.com/georgecairns-ui/agentic-content-machine into a folder called "Agentic Content Machine" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up.
 
    Claude copies everything onto your computer and tells you how to open the new folder. In the desktop app, you choose the folder in the Code tab.
 
-   *For Claude, if this README is all you have:* read START-HERE.md on the repository page at https://github.com/georgecairns-ui/content-machine-os, then copy the folder with the Mac or Windows line in it.
-3. **In the Code tab, choose the Content Machine OS folder and pick "Yes, I trust this folder".** The first time, the app asks whether you trust the folder and warns that it pre-approves some permissions. Those permissions only let Claude update your plan and your business notes, look things up on public web pages for the research, and start the app, without stopping to ask each time. It still can't post for you or send anything, and it never logs in to anything except the read-only connections you set up in step 3.
+   *For Claude, if this README is all you have:* read START-HERE.md on the repository page at https://github.com/georgecairns-ui/agentic-content-machine, then copy the folder with the Mac or Windows line in it.
+3. **In the Code tab, choose the Agentic Content Machine folder and pick "Yes, I trust this folder".** The first time, the app asks whether you trust the folder and warns that it pre-approves some permissions. Those permissions only let Claude update your plan and your business notes, look things up on public web pages for the research, and start the app, without stopping to ask each time. It still can't post for you or send anything, and it never logs in to anything except the read-only connections you set up in step 3.
 4. **Type `/setup`.**
 
 Then it opens your calendar and gives you its link, **http://localhost:4747/content/**. Bookmark it.
@@ -72,7 +72,7 @@ Then it opens your calendar and gives you its link, **http://localhost:4747/cont
 
 ## Your information
 
-Your plan lives in this folder on your computer, in one file. Your notes about the business are in `context/`. For the research, Claude reads public web pages (search suggestions, forums, news and your competitors' public pages). The research never logs in anywhere or uses a connection. Claude never follows or messages anyone and never posts for you. Any platform you connect is connected through Claude's Connectors: you sign in on the platform's own page, with no keys, and Claude only reads your own account when you ask. A platform with no Claude connector can be read from a CSV or PDF export you drop in the files folder. There's no Content Machine OS account or server; Get AI Powers can't see any of it. Read [docs/PRIVACY-AND-SAFETY.md](docs/PRIVACY-AND-SAFETY.md) for the detail.
+Your plan lives in this folder on your computer, in one file. Your notes about the business are in `context/`. For the research, Claude reads public web pages (search suggestions, forums, news and your competitors' public pages). The research never logs in anywhere or uses a connection. Claude never follows or messages anyone and never posts for you. Any platform you connect is connected through Claude's Connectors: you sign in on the platform's own page, with no keys, and Claude only reads your own account when you ask. A platform with no Claude connector can be read from a CSV or PDF export you drop in the files folder. There's no Agentic Content Machine account or server; Get AI Powers can't see any of it. Read [docs/PRIVACY-AND-SAFETY.md](docs/PRIVACY-AND-SAFETY.md) for the detail.
 
 ## Make it yours
 
@@ -80,7 +80,7 @@ Change the platforms, the themes, the number of posts a week, approval and the c
 
 ## Want it set up properly for you?
 
-Content Machine OS works on its own. If you'd like help turning it into a weekly habit for your whole team, Get AI Powers can help. Find us at [getaipowers.com](https://getaipowers.com).
+Agentic Content Machine works on its own. If you'd like help turning it into a weekly habit for your whole team, Get AI Powers can help. Find us at [getaipowers.com](https://getaipowers.com).
 
 ## What's inside
 
@@ -97,7 +97,7 @@ skills-to-upload/      the skill Claude builds about your business, packed up fo
 files/                 your business documents, in numbered folders
 apps/                  the app and its look (theme.css); apps/content/data/content.json is your plan
 docs/                  customising, privacy and safety
-maintainers/           for people developing Content Machine OS itself
+maintainers/           for people developing Agentic Content Machine itself
 ```
 
 ## Licence

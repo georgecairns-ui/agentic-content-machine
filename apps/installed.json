@@ -2,7 +2,7 @@
   "tools": [
     {
       "id": "content",
-      "name": "Content Machine OS",
+      "name": "Agentic Content Machine",
       "app": "apps/content/",
       "media": true,
       "dataFiles": [

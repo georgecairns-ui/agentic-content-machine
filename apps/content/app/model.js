@@ -1,5 +1,5 @@
 /*
-  MODEL: the rules of Content Machine OS, as plain functions
+  MODEL: the rules of Agentic Content Machine, as plain functions
   ----------------------------------------------------------
   No screen code in here. The pages, the post editor and the Home boxes all ask these functions,
   so every number and every status means the same thing everywhere. It also runs under Node,

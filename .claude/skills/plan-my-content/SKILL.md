@@ -1,6 +1,6 @@
 ---
 name: plan-my-content
-description: Fills the next weeks of the Content Machine OS calendar with posts, using the research and new ideas first, hitting each platform's posts-a-week, mixing the themes, and setting the day, time, platforms, picture or video idea, what Claude needs from the person, and a score for each platform. Writes the words straight away for every post, including ones that need a photo or video, and holds back only the posts that need a case study or information from them. Never changes a post that already exists and never posts anything. Use when they press Plan next weeks, or say "plan my content", "plan next week", "fill my calendar", "what should I post?" or "plan the next 2 weeks".
+description: Fills the next weeks of the Agentic Content Machine calendar with posts, using the research and new ideas first, hitting each platform's posts-a-week, mixing the themes, and setting the day, time, platforms, picture or video idea, what Claude needs from the person, and a score for each platform. Writes the words straight away for every post, including ones that need a photo or video, and holds back only the posts that need a case study or information from them. Never changes a post that already exists and never posts anything. Use when they press Plan next weeks, or say "plan my content", "plan next week", "fill my calendar", "what should I post?" or "plan the next 2 weeks".
 ---
 
 # Plan my content
@@ -13,13 +13,13 @@ You fill the calendar so the person doesn't stare at a blank page. You propose; 
 - `context/content.md`, `context/voice.md` and the what-works skill named in `research.skill`.
 - `.claude/skills/write-posts/references/platforms.md`.
 - Today's date. Work out dates from it; never guess them.
-- Optional, if attached (`apps/installed.json`): Pipeline OS (`pipeline`) and Task List OS (`task-list`).
+- Optional, if attached (`apps/installed.json`): Agentic Pipeline (`pipeline`) and Agentic Task List (`task-list`).
 
 If `research.updatedAt` is empty or `platforms` has no platform switched on, say so and offer to run `research-my-market` or the platforms step first. Don't plan from nothing.
 
 ## Steps
 
-1. **Bring in wins (only if attached).** Pipeline OS: every deal in `apps/pipeline/data/pipeline.json` with `stage: "won"` that has no idea yet becomes an idea (`source: "pipeline"`, with the deal's id in `notes` so you can tell next time, and a plain note on what happened, from the deal's `summary`) and gets a `case-study` need when it becomes a post. Never edit a deal. If Pipeline OS isn't attached, skip this step quietly.
+1. **Bring in wins (only if attached).** Agentic Pipeline: every deal in `apps/pipeline/data/pipeline.json` with `stage: "won"` that has no idea yet becomes an idea (`source: "pipeline"`, with the deal's id in `notes` so you can tell next time, and a plain note on what happened, from the deal's `summary`) and gets a `case-study` need when it becomes a post. Never edit a deal. If Agentic Pipeline isn't attached, skip this step quietly.
 2. **Work out the window.** It starts on the next day with no post planned (today if today is empty and it's before the default time, otherwise tomorrow) and runs for `settings.planWeeks` weeks of 7 days. Take the weeks from the day `weekStarts` names when you work out where a week begins.
 3. **Work out what each week needs.** For each platform that's on, the target is its `perWeek`. Count the posts already in that week that carry that platform (posts with a date, not skipped) and fill only the gap. A post can carry several platforms: that counts once for each. If `perWeek` is 0 for a platform, leave it out. Never go over a platform's `perWeek`.
 4. **Choose what to say.** In this order:

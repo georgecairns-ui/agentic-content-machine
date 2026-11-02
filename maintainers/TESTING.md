@@ -1,4 +1,4 @@
-# Testing Content Machine OS
+# Testing Agentic Content Machine
 
 How to test the whole thing as a customer would, without touching the repo. Also follow section 5 of `SHARED-V3-CHANGES.md` and the testing sections of `SHARED-V4-CHANGES.md` through `SHARED-V11-CHANGES.md` for the shared parts.
 
@@ -32,7 +32,7 @@ Never test inside the repo: setup writes real details into it. Build the release
 bash maintainers/make-release.sh
 ```
 
-Then unzip `dist/content-machine-os.zip` into a test location, for example `Documents/Content Machine OS test`. Each test run starts from a fresh unzip. Then check the release script itself refuses what it should, on a scratch copy of the repo, by adding each of these and running it (each must stop with a plain message):
+Then unzip `dist/agentic-content-machine.zip` into a test location, for example `Documents/Agentic Content Machine test`. Each test run starts from a fresh unzip. Then check the release script itself refuses what it should, on a scratch copy of the repo, by adding each of these and running it (each must stop with a plain message):
 
 - a non-empty `posts` list in `apps/content/data/content.json`,
 - a filled-in `context/content.md`,
@@ -44,7 +44,7 @@ Then unzip `dist/content-machine-os.zip` into a test location, for example `Docu
 
 ## 3. Page checks
 
-Run the app (`node apps/server/server.js` or `python3 apps/server/server.py`), open http://localhost:4747, go into Content Machine OS, and check:
+Run the app (`node apps/server/server.js` or `python3 apps/server/server.py`), open http://localhost:4747, go into Agentic Content Machine, and check:
 
 - **One page**: the sidebar shows one item, "Content calendar". Under the top bar is the rail: Calendar | To do | Ideas | Research | Platforms (To do shows its count), a Health check button with a coloured dot, and the Settings gear. Each view has its own address (`#calendar`, `#todo`, `#ideas`, `#research`, `#platforms`, `#health`) and Back and Forward move between them; the keys 1 to 6 do too. The rail's tabs scroll inside themselves on a phone and nothing scrolls sideways from 320 to 2560 pixels.
 - **Fresh install** (empty data file): every view (Calendar, To do, Ideas, Research, Platforms and Health check) and the first Home box show "Let's set up your content machine" with the `/setup` line and a copy button. Every other empty page says what will fill it. Nothing mentions a demo.
@@ -76,7 +76,7 @@ Run the app (`node apps/server/server.js` or `python3 apps/server/server.py`), o
 
 ## 5. The 3 jobs, with a stand-in `claude`
 
-Point `TLOS_CLAUDE` at a stand-in script that follows the job prompts without using real Claude (see Task List OS's own stand-in for the pattern). For each job, trigger it from the app and check:
+Point `TLOS_CLAUDE` at a stand-in script that follows the job prompts without using real Claude (see Agentic Task List's own stand-in for the pattern). For each job, trigger it from the app and check:
 
 - **`research-my-market`**: the stand-in writes `research` in the right shape (with a `source` on every search and competitor) and sets `research.skill`; the app shows "Claude is researching what your customers search for" while it runs and the result afterwards.
 - **`plan-my-content`**: the stand-in adds posts for `settings.planWeeks` weeks and leaves existing posts byte for byte unchanged; no platform goes over its `perWeek`; every on-platform has 5 factors (0 to 2) and a reason; no total score appears anywhere in the file; posts with open needs stay `idea` with no text; `activity` gets a line at the front.
@@ -94,7 +94,7 @@ Search the whole kit (`apps/content/`, `.claude/skills/`, `setup/`, `docs/`, `.c
 
 ## 7. Menu and locked-tool panel
 
-As `SHARED-V3-CHANGES.md` section 5 describes: on a scratch copy, the sidebar shows Home, Content Machine OS as an open dropdown with its one page (Content calendar, carrying the count of things due today or overdue), and the other 6 tools locked under "More tools" in catalogue order. Folding the dropdown shows the total waiting and the choice is remembered. Each locked tool opens the panel with the right tracking on its button link; Escape and a click outside close it; it works by keyboard and at phone width. `showMoreTools: false` in `catalogue.json` hides the locked tools completely. The `content` entry's description reads as in `SHARED-CATALOGUE-RENAME.md`.
+As `SHARED-V3-CHANGES.md` section 5 describes: on a scratch copy, the sidebar shows Home, Agentic Content Machine as an open dropdown with its one page (Content calendar, carrying the count of things due today or overdue), and the other 6 tools locked under "More tools" in catalogue order. Folding the dropdown shows the total waiting and the choice is remembered. Each locked tool opens the panel with the right tracking on its button link; Escape and a click outside close it; it works by keyboard and at phone width. `showMoreTools: false` in `catalogue.json` hides the locked tools completely. The `content` entry's description reads as in `SHARED-CATALOGUE-RENAME.md`.
 
 ## 8. Setup, as the customer's Claude
 
@@ -108,13 +108,13 @@ On a fresh unzip, run `/setup` as if you were the customer's Claude, with a made
 - Step 6 passes every item in `setup/09-check-and-hand-over.md` and marks setup complete only at the very end.
 - Nothing in the folder ends up containing a password, a key or a code.
 
-## 9. Attach to a scratch Task List OS (and Pipeline OS)
+## 9. Attach to a scratch Agentic Task List (and Agentic Pipeline)
 
-Follow `ATTACHING.md` on a scratch copy of Task List OS, then check:
+Follow `ATTACHING.md` on a scratch copy of Agentic Task List, then check:
 
-- Both tools show as dropdowns in the sidebar; Home offers both tools' boxes (this tool's start off, in the hidden list, per the shared rule); nothing in Task List OS broke; setup didn't ask what the business does a second time.
-- `plan-my-content` adds a suggested task to Task List OS for each open need, and `content-check-in` for each post due today, with `source.tool` set to `content`, a `source.id` that matches the post or need, `suggested: true` and `addedBy: "claude"`. They show on its Review page with a New tag and need a click. Running either twice adds nothing twice. A task for a posted post or a need already done is never added.
-- With Pipeline OS also attached: a deal moved to `won` becomes one idea (`source: "pipeline"`) with a case-study need once `plan-my-content` runs, never twice, and no deal record is changed.
+- Both tools show as dropdowns in the sidebar; Home offers both tools' boxes (this tool's start off, in the hidden list, per the shared rule); nothing in Agentic Task List broke; setup didn't ask what the business does a second time.
+- `plan-my-content` adds a suggested task to Agentic Task List for each open need, and `content-check-in` for each post due today, with `source.tool` set to `content`, a `source.id` that matches the post or need, `suggested: true` and `addedBy: "claude"`. They show on its Review page with a New tag and need a click. Running either twice adds nothing twice. A task for a posted post or a need already done is never added.
+- With Agentic Pipeline also attached: a deal moved to `won` becomes one idea (`source: "pipeline"`) with a case-study need once `plan-my-content` runs, never twice, and no deal record is changed.
 - With none of those attached: everything above is skipped quietly, with no error.
 
 ## 10. Helper: Node and Python behave the same

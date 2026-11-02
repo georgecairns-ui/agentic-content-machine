@@ -12,7 +12,7 @@
   const ui = window.TaskListOS.ui, esc = ui.esc, icon = ui.icon;
 
   const SOURCE_LABELS = {
-    research: "Research", "brain-dump": "Brain dump", you: "You", pipeline: "Pipeline OS",
+    research: "Research", "brain-dump": "Brain dump", you: "You", pipeline: "Agentic Pipeline",
     "case-study": "Case study", claude: "Claude"
   };
 

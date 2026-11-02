@@ -2,25 +2,25 @@
 #
 # MAKE RELEASE
 # ------------
-# Builds dist/content-machine-os.zip: a clean copy of the kit for customers to download.
+# Builds dist/agentic-content-machine.zip: a clean copy of the kit for customers to download.
 #
-# Run it from the content-machine-os folder with:   bash maintainers/make-release.sh
+# Run it from the agentic-content-machine folder with:   bash maintainers/make-release.sh
 #
 # What it does:
 #   1. Checks the files that ship are still blank templates, so nobody's real content plan,
 #      business notes, built skill, setup progress or photos and videos can go out by mistake. Stops if not.
-#   2. Copies the kit into a temporary folder called "Content Machine OS", leaving out this
+#   2. Copies the kit into a temporary folder called "Agentic Content Machine", leaving out this
 #      maintainers folder, git history, old builds, backups and computer clutter.
 #   3. Checks the copy is complete and every data and settings file is valid, and syntax-checks the app's scripts.
-#   4. Zips it as dist/content-machine-os.zip, replacing any older one.
+#   4. Zips it as dist/agentic-content-machine.zip, replacing any older one.
 
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DIST="$ROOT/dist"
-STAGE="$(mktemp -d "${TMPDIR:-/tmp}/content-machine-os-build.XXXXXX")"
+STAGE="$(mktemp -d "${TMPDIR:-/tmp}/agentic-content-machine-build.XXXXXX")"
 trap 'rm -rf "$STAGE"' EXIT
-NAME="Content Machine OS"
+NAME="Agentic Content Machine"
 OUT="$STAGE/$NAME"
 
 fail() { echo "RELEASE STOPPED: $1" >&2; exit 1; }
@@ -120,7 +120,7 @@ shared_version = (root / "apps/shared/VERSION").read_text().split()[0]
 if str(json.loads((root / "toolkit.json").read_text()).get("sharedVersion")) != shared_version:
     problems.append(f"toolkit.json sharedVersion is {json.loads((root / 'toolkit.json').read_text()).get('sharedVersion')!r} but apps/shared/VERSION says {shared_version}: change them together")
 # Shared parts are identical in every tool, so they must not name one. No file may use the old start-up names,
-# and no message in the scripts, the helper or the shared page code may say "Content Machine OS" (they read the tool's name from toolkit.json)
+# and no message in the scripts, the helper or the shared page code may say "Agentic Content Machine" (they read the tool's name from toolkit.json)
 skip_dirs = {".git", "dist", "maintainers", "node_modules"}
 for f in sorted(root.rglob("*")):
     if not f.is_file() or skip_dirs & set(f.relative_to(root).parts) or f.suffix in (".png", ".jpg", ".woff2", ".zip", ".gz", ".ico"):
@@ -154,8 +154,8 @@ for f in sorted(root.rglob("*")):
     for old in ("open-task-list", "start-task-list"):
         if old in txt:
             problems.append(f"{rel} uses the old name {old} (it is now open-the-app / start-app, the same in every tool)")
-    if re.match(r"setup/scripts/|apps/server/|apps/shared/js/", rel) and re.search(r"Content Machine OS|(?<!window\.)TaskListOS", txt):
-        problems.append(f"{rel} names a tool (Content Machine OS): shared parts read the name from toolkit.json")
+    if re.match(r"setup/scripts/|apps/server/|apps/shared/js/", rel) and re.search(r"Agentic Content Machine|(?<!window\.)TaskListOS", txt):
+        problems.append(f"{rel} names a tool (Agentic Content Machine): shared parts read the name from toolkit.json")
 for p in problems:
     print("  - " + p, file=sys.stderr)
 sys.exit(1 if problems else 0)
@@ -180,8 +180,8 @@ done
 for f in apps/content/data/content.json apps/content/menu.json apps/content/claude-jobs.json toolkit.json apps/installed.json apps/shared/catalogue.json .claude/settings.json; do
   python3 -c 'import json,sys; json.load(open(sys.argv[1]))' "$OUT/$f" || fail "$f is not valid"
 done
-# A fresh download lists only Content Machine OS, and no test tool ever ships
-python3 -c 'import json,sys; t=json.load(open(sys.argv[1]))["tools"]; sys.exit(0 if [x["id"] for x in t]==["content"] else 1)' "$OUT/apps/installed.json" || fail "apps/installed.json must list only Content Machine OS"
+# A fresh download lists only Agentic Content Machine, and no test tool ever ships
+python3 -c 'import json,sys; t=json.load(open(sys.argv[1]))["tools"]; sys.exit(0 if [x["id"] for x in t]==["content"] else 1)' "$OUT/apps/installed.json" || fail "apps/installed.json must list only Agentic Content Machine"
 python3 -c 'import json,sys; t=json.load(open(sys.argv[1])); sys.exit(0 if t.get("id")=="content" else 1)' "$OUT/toolkit.json" || fail "toolkit.json must have id content"
 [ ! -e "$OUT/apps/test-tool" ] || fail "the test tool is in the release"
 # The data file must be listed, in both places that track it
@@ -255,7 +255,7 @@ HITS=$(found -EinH "$BANNED" "$OUT/README.md" "$OUT/START-HERE.md")
 [ -z "$HITS" ] || fail "a banned word is in README.md or START-HERE.md: $(printf '%s\n' "$HITS" | head -3)"
 # The old tool's name must not linger in anything this tool owns. (ATTACHING.md and apps/shared,
 # apps/home and apps/server are shared and may name other tools.) Every path is checked to exist first.
-OLD='skill-map|skill map|skillmap|skill and folder map|skill-and-folder|Pipeline OS Licence'
+OLD='skill-map|skill map|skillmap|skill and folder map|skill-and-folder|Agentic Pipeline Licence'
 OLD_PATHS=("$OUT/README.md" "$OUT/START-HERE.md" "$OUT/CLAUDE.md" "$OUT/LICENSE" "$OUT/toolkit.json" "$OUT/Open Content Machine.html" "$OUT/docs" "$OUT"/setup/*.md "$OUT/context" "$OUT/apps/content" "$OUT/apps/installed.json" "$OUT/skills-to-upload" "$OUT/.claude/settings.json" "$OUT/.claude/skills/README.md")
 for skill in setup write-posts research-my-market build-my-content-skill plan-my-content turn-this-into-posts use-my-case-study content-check-in ive-posted-it sort-content-brain-dump; do
   OLD_PATHS+=("$OUT/.claude/skills/$skill")
@@ -303,6 +303,6 @@ SCREENEOF
 SKILLS=$(find "$OUT/.claude/skills" -name SKILL.md | wc -l | tr -d ' ')
 
 # ---------- 4. Zip (COPYFILE_DISABLE stops macOS adding hidden ._ files) ----------
-rm -f "$DIST/content-machine-os.zip"
-(cd "$STAGE" && COPYFILE_DISABLE=1 zip -rqX "$DIST/content-machine-os.zip" "$NAME")
-echo "Built dist/content-machine-os.zip ($(du -h "$DIST/content-machine-os.zip" | cut -f1 | tr -d ' '), $SKILLS skills)"
+rm -f "$DIST/agentic-content-machine.zip"
+(cd "$STAGE" && COPYFILE_DISABLE=1 zip -rqX "$DIST/agentic-content-machine.zip" "$NAME")
+echo "Built dist/agentic-content-machine.zip ($(du -h "$DIST/agentic-content-machine.zip" | cut -f1 | tr -d ' '), $SKILLS skills)"

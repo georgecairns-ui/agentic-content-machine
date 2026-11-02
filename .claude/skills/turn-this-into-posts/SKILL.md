@@ -1,6 +1,6 @@
 ---
 name: turn-this-into-posts
-description: Takes something the person says or pastes (an idea, a win, a customer's kind words, a question customers keep asking, a file) and adds it to Content Machine OS as an idea, or as a planned post if they say when. Use when they say "I've got an idea", "turn this into a post", "make this into content", "this would make a good post", "post about this", or paste a review, a testimonial or a note about something that happened.
+description: Takes something the person says or pastes (an idea, a win, a customer's kind words, a question customers keep asking, a file) and adds it to Agentic Content Machine as an idea, or as a planned post if they say when. Use when they say "I've got an idea", "turn this into a post", "make this into content", "this would make a good post", "post about this", or paste a review, a testimonial or a note about something that happened.
 ---
 
 # Turn this into posts

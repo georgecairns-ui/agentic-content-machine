@@ -1,6 +1,6 @@
 ---
 name: research-my-market
-description: Researches what the person's customers search for and talk about, what's in season, and what their competitors do on each platform, using public web pages only, and saves it to the Research page in Content Machine OS. Then builds or updates the business's own what-works skill. Never logs in anywhere, never follows or messages anyone. Use when they press Refresh research, or say "research my market", "what are people searching for?", "refresh my research", "look at my competitors", "what's trending for us?" or "what works in my industry?".
+description: Researches what the person's customers search for and talk about, what's in season, and what their competitors do on each platform, using public web pages only, and saves it to the Research page in Agentic Content Machine. Then builds or updates the business's own what-works skill. Never logs in anywhere, never follows or messages anyone. Use when they press Refresh research, or say "research my market", "what are people searching for?", "refresh my research", "look at my competitors", "what's trending for us?" or "what works in my industry?".
 ---
 
 # Research my market
