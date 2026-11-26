@@ -2,10 +2,13 @@
 
 Goal: you know what the business sells, the problems it solves for customers, what makes it different, who its customers are and where it works, and you have 3 to 5 themes to plan posts around. **Agentic Content Machine can't research or plan without this.** It's what you search for, what you write about and how you tell a useful post from a generic one. So this step is required: setup doesn't go past it until questions 1 to 3 are answered.
 
+First, follow `setup/first-questions.md` if it isn't done yet (its first paragraph says how to tell; step 1 usually does it, but when Agentic Content Machine is added to another tool's folder this step can come first). Don't ask again for anything it found or they confirmed.
+
 ## 1. Work it out first
 
 The person shouldn't start from a blank page. Before asking anything, quietly gather what you can:
 
+- What you found and they confirmed in `setup/first-questions.md` (section 3), and their goal in `context/goal.md`.
 - `context/business.md`, now filled in from step 1. Reuse it. Never ask something it already answers.
 - Their **website**, if you can read web pages: services, who it's for, the town, case studies, how they describe themselves.
 - Their public pages and posts, if they gave you a link in step 1.
@@ -22,7 +25,6 @@ Ask one question, wait for the answer, say what you've saved in one short line, 
 3. **What makes you different from the others who do the same thing?** "In your words. Why do people pick you?" (I've got: ...)
 4. **Who are your customers?** "The kind of person or business, roughly how big, and who usually makes the decision." (I've got: ...)
 5. **Where do you work?** "Your town, your area, or 'online, UK wide'."
-6. **What's your name, and the business name?** Only if you don't already have them.
 
 If they skip 1, 2 or 3, ask once more, kindly, and say why in one sentence:
 
@@ -35,7 +37,7 @@ If they still don't want to answer, stop here. Note it in `setup/progress.md` ("
 After each answer, save it, so nothing is lost if they stop:
 
 - `context/content.md`: one section per question, in their words. If it doesn't exist (Agentic Content Machine was attached to another tool's folder), create it from this tool's `context/content.md` template first. Change its status line to `Status: filled in on <date>`.
-- `apps/content/data/content.json`: `settings.businessName`, `settings.ownerName`, and `settings.about` (`sells`, `problems` as a list of short phrases, `different`, `who`, `where`).
+- `apps/content/data/content.json`: `settings.businessName` and `settings.ownerName` from `context/business.md` (`setup/first-questions.md` asked them, so don't ask again), and `settings.about` (`sells`, `problems` as a list of short phrases, `different`, `who`, `where`).
 - If `context/business.md` is still thin, add to it from the same answers. Never overwrite what's there.
 
 ## 4. Choose 3 to 5 themes

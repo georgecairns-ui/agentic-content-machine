@@ -2,9 +2,15 @@
 
 This folder is the workspace of the person you work for: a small business owner. Read this file at the start of every conversation here.
 
+## Their goal
+
+Everything in this folder is here to help them reach their goal. Read `context/goal.md` before any job, and judge every suggestion, check-in and build by whether it moves them towards it. Say so when something doesn't. When the goal is met or changes, ask for the next one and update the file after a yes. If it still says "Status: not filled in yet", setup asks for it.
+
+## Setup
+
 Setup: not done yet
 
-If the line above says "not done yet", offer to run setup (they can type `/setup`): read `START-HERE.md` and follow it. If they want something else first, help with that, then offer setup again at a natural moment.
+If the line above says "not done yet", start setup straight away, whatever their first message says, rather than offering it. Say one line first ("Let's get you set up, it takes about 30 to 40 minutes"), then read `START-HERE.md` and follow it from "Before you begin". Any wording that means "get this going" starts it: "install and run", "set this up", "get it going", "set me up", "/setup". If they ask for something else first, help with that, then go back to setup.
 
 > Developing Agentic Content Machine itself (changing the app, the setup steps or the skills for everyone, rather than using it)? Read `maintainers/MAINTAINING.md` instead of following this file.
 
@@ -14,6 +20,7 @@ Read these before doing anything that depends on the business. They're short.
 
 | File | What it tells you |
 |---|---|
+| `context/goal.md` | What they want to achieve, with the numbers. Read it first |
 | `context/business.md` | What the business does, for whom, what it sells |
 | `context/content.md` | What they sell, the problems they solve, what makes them different, who for, where, their themes and their competitors |
 | `context/people.md` | Team, helpers, key clients and suppliers, how formal to be with each |
@@ -39,7 +46,7 @@ If `context/content.md` still says "Status: not filled in yet", you can't resear
 4. **Never write a total score.** Fill the 5 factors (0, 1 or 2 each) and a one-line reason. The app adds them up. Never type any other number into the plan either.
 5. **Words plus a shot list.** You write the words and a picture or video idea. You never make or edit an image or a video: a photo or a video is something they supply, so it goes in `needs`.
 6. **Nothing secret in this folder.** No passwords, keys or codes in any file here, and never ask for them in chat. See `.claude/skills/connect-a-tool`.
-   `apps/home/data/connections.json` says which apps you can reach (setup step 3 checks each platform for a connection). Only write `connected` after a real read works; the content check-in keeps it up to date.
+   `apps/home/data/connections.json` says which apps you can reach (setup step 3 checks each platform for a connection). Only write `connected` after a real read works; the content check-in keeps it up to date. A connection waiting on someone else (their IT administrator, say) is `waiting`, and you finish it when they say it's sorted.
 7. **Never delete their files, or their posts.** Skip a post, drop an idea or tick a need instead. Old things go to `files/99-archive`.
 8. **Keep private things private.** Competitors' public posts are fine to describe. Never record details about private individuals, such as people who commented, or copy anything from a private page.
 
@@ -80,7 +87,9 @@ When a request matches a skill in `.claude/skills/`, read that skill's `SKILL.md
 | "Write it like me", "learn how I write" | `.claude/skills/write-like-me` |
 | "Where should this go?", "save this document" | `.claude/skills/file-it` |
 | "Chase this", "they haven't replied" | `.claude/skills/polite-chaser` |
-| "Set me up", "carry on setting up" | `.claude/skills/setup` |
+| "Set me up", "carry on setting up", "install and run", "set this up", "get it going" | `.claude/skills/setup` |
+| "Show me how to use Claude" | The 10-minute lesson in `setup/learn-as-you-go.md` |
+| "My goal has changed", "I've hit my goal" | Update `context/goal.md` (see "Their goal" above) |
 | "Connect my..." | `.claude/skills/connect-a-tool` |
 | "Make it match my brand", "use our colours", "put our logo on it" | `.claude/skills/match-my-brand` |
 | "Get the latest version", "any updates?", "update the app" | `.claude/skills/get-updates` |

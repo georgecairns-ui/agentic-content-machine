@@ -1,6 +1,6 @@
 # Start here
 
-> **If you're a person reading this:** you don't need to do anything in this file. Open this folder in the Claude desktop app (the Code tab) and type **/setup** (or say "Read START-HERE.md and set me up"). Claude asks you a few quick questions about your business, one at a time, checks whether it can connect to the platforms you post on, researches what your customers search for and what your competitors do well, and plans your first posts. Most people are done in 30 to 40 minutes. The first time you open the folder, the app asks whether you trust it: choose **Yes, I trust this folder**. That lets Claude update your plan and notes, and read public web pages for the research, without asking every time. It still can't post anything for you or send anything, and it never logs in to anything except the read-only connections you set up in step 3.
+> **If you're a person reading this:** you don't need to do anything in this file. Open this folder in the Claude desktop app (the Code tab) and type anything, even "hello". Setup starts from there. (Or type **/setup**.) Claude asks you a few quick questions about your business, one at a time, checks whether it can connect to the platforms you post on, researches what your customers search for and what your competitors do well, and plans your first posts. Most people are done in 30 to 40 minutes. The first time you open the folder, the app asks whether you trust it: choose **Yes, I trust this folder**. That lets Claude update your plan and notes, and read public web pages for the research, without asking every time. It still can't post anything for you or send anything, and it never logs in to anything except the read-only connections you set up in step 3.
 
 ---
 
@@ -40,11 +40,13 @@ This folder is their workspace from now on: `context/` holds what you know about
 
    | Guide mode | How you guide |
    |---|---|
-   | beginner | One step per message. Say where every button is on their screen ("top left", "the + under the message box"). Plain words only: "connection", never MCP, API, JSON or repo. Check each thing worked before the next, and say what you just did |
+   | beginner | One step per message. Say where every button is on their screen ("top left", "the + under the message box"). Plain words only: "connection", never MCP, API, JSON or repo. Check each thing worked before the next, and say what you just did. End each step with one "You just learned" line from `setup/learn-as-you-go.md` |
    | some | 2 or 3 steps per message, and a check after each connection |
    | confident | Batch it: check every platform they picked for a connection at once and report once, for example "I'll look for a connection for Instagram, LinkedIn and your newsletter now, then tell you what I found" |
 
    The guide mode changes the pace and how much you explain. It never changes the rules: every connection is proven with a real read, and you never post anything.
+
+   Straight after the guide mode question (or, if it was already answered, in your first message), say this line: "Tell me anything as we go, even small stuff, the way you'd tell a colleague. 'My IT team has to approve that' or 'I use 2 emails' is exactly what I need."
 3. Read `setup/progress.md`. If some steps are ticked, say hello, remind them where you got to, and carry on from the first unticked step.
 4. Read `CLAUDE.md` in this folder: the standing rules.
 5. If setup is already complete, don't run it again. Ask what they'd like to do.
@@ -53,7 +55,7 @@ This folder is their workspace from now on: `context/` holds what you know about
 
 | Step | File | What happens | Their time |
 |---|---|---|---|
-| 1 | `setup/05-get-to-know-the-business.md` | A short chat about the business, filling `context/business.md`, then matching the app to their brand | 5 min |
+| 1 | `setup/05-get-to-know-the-business.md` | `setup/first-questions.md` first (their plan, files, what they already use, their goal, then you look for the rest yourself and show them what you found), then a short chat about the business, filling `context/business.md`, then matching the app to their brand | 8 min |
 | 2 | `setup/content-01-your-business.md` | What they sell, the problems they solve, what makes them different, who for and where, then 3 to 5 themes and their voice | 8 min |
 | 3 | `setup/content-02-your-platforms.md` | Which platforms, their handles, and a realistic number of posts a week for each, then a connection for each platform that has a Claude connector (no keys) | 6 min |
 | 4 | `setup/content-03-research.md` | Competitors, then the research, then their own skill built from it | 6 min |
@@ -64,7 +66,9 @@ Start by telling them what's about to happen, in a few short lines: you'll ask a
 
 This setup is their first proper look at what Claude can do for their marketing. Do as much as you can yourself, ask as little as possible, one question at a time, and save each answer as you go. Keep a running count of what you've done (searches found, competitors read, posts planned) for the hand-over.
 
-After each step: tick it in `setup/progress.md` with a one-line note, tell them in one sentence what you set up and what's next. If they want to stop, stop; next time they say "carry on setting up" or type `/setup`.
+After each step: tick it in `setup/progress.md` with a one-line note, tell them in one sentence what you set up and what's next. In beginner mode, add the "You just learned" line for that step (`setup/learn-as-you-go.md`). If they want to stop, stop; next time they say "carry on setting up" or type `/setup`.
+
+Whenever they hesitate, skip a question, say "I don't know" or hit a blocker, invite them to tell you more, in one line that fits the moment: "What's getting in the way? Tell me like you'd tell me over a coffee."
 
 ## Ground rules for the whole setup
 
@@ -75,6 +79,8 @@ These don't bend, whatever is asked later.
 - **Never invent proof.** No made-up results, statistics, quotes, customer names, prices or offers. If a post needs one, ask for it.
 - **Never write a total score.** You fill the 5 factors and a reason. The app adds them up.
 - **No passwords or keys in chat or in this folder.** People sign in on each app's own screen, through Claude's Connectors. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Agentic Money View and the Agentic Command Centre. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Agentic Money View.)
+- **Waiting on someone else doesn't stop setup.** When a connection needs their IT administrator, their Claude Owner or a password reset, park it as `waiting` (`.claude/skills/connect-a-tool`, "Waiting on someone else"), connect what they can now, and go on to the next step.
+- **Keep track of what they promise to share.** Every file they say they'll share goes under "Files you said you'd share" in `setup/progress.md`. Look for it yourself first, and repeat the list back before each new step (`setup/first-questions.md`, section 4).
 - **Be honest about what you can reach.** Check the connection status yourself rather than asking what's on their screen, and prove every connection with a real read before you rely on it. If you're not sure a connector exists, search Claude's connector directory and say what you found. Public pages only show so much, and some platforms hide most things without a login. The research is a picture of what was visible, not everything. Say so plainly rather than let them draw the wrong conclusion.
 - **Never delete their files or their posts.** Old things go to `files/99-archive`, and only for the files in this toolkit.
 - **Keep private things private.** Public competitor posts are fine to describe. Never record details about private individuals.
