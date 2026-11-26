@@ -25,7 +25,6 @@ Ask one question, wait for the answer, say what you've saved in one short line, 
 3. **What makes you different from the others who do the same thing?** "In your words. Why do people pick you?" (I've got: ...)
 4. **Who are your customers?** "The kind of person or business, roughly how big, and who usually makes the decision." (I've got: ...)
 5. **Where do you work?** "Your town, your area, or 'online, UK wide'."
-6. **What's your name, and the business name?** Only if you don't already have them.
 
 If they skip 1, 2 or 3, ask once more, kindly, and say why in one sentence:
 
@@ -38,7 +37,7 @@ If they still don't want to answer, stop here. Note it in `setup/progress.md` ("
 After each answer, save it, so nothing is lost if they stop:
 
 - `context/content.md`: one section per question, in their words. If it doesn't exist (Agentic Content Machine was attached to another tool's folder), create it from this tool's `context/content.md` template first. Change its status line to `Status: filled in on <date>`.
-- `apps/content/data/content.json`: `settings.businessName`, `settings.ownerName`, and `settings.about` (`sells`, `problems` as a list of short phrases, `different`, `who`, `where`).
+- `apps/content/data/content.json`: `settings.businessName` and `settings.ownerName` from `context/business.md` (`setup/first-questions.md` asked them, so don't ask again), and `settings.about` (`sells`, `problems` as a list of short phrases, `different`, `who`, `where`).
 - If `context/business.md` is still thin, add to it from the same answers. Never overwrite what's there.
 
 ## 4. Choose 3 to 5 themes

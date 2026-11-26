@@ -80,7 +80,7 @@ Then tell them, briefly:
 - **The weekly plan**, if they chose it: the day and time it runs.
 - **Anything still waiting.** Every `waiting` connection with the one thing to do next: "LinkedIn is waiting on your Claude Owner to add it. When they have, press Finish connecting on Home, or tell me, and I'll read it then."
 - **Files you said you'd share.** Any still `to find` in `setup/progress.md`, by name.
-- **Joining up the rest.** If anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link next to each one.
+- **Joining up the rest.** If anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link.
 
 Then offer the 10-minute "how to use Claude day to day" lesson from `setup/learn-as-you-go.md`, in every guide mode. If they say no, tell them they can say "show me how to use Claude" any time.
 
