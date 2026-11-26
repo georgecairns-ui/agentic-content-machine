@@ -14,7 +14,8 @@ Check these yourself. Fix anything that fails, then check again.
 - [ ] The **Plan next weeks** and **Refresh research** buttons can ask Claude to run a job. It needs Claude Code installed on this computer; if it isn't, the app says to ask Claude instead, rather than failing quietly.
 - [ ] The app looks right in both light and dark (the moon or sun button at the top).
 - [ ] Nothing secret (a password, a key, a code) is anywhere in this folder, and nothing was posted or sent, and nothing was logged in to except the read-only connections from step 3.
-- [ ] Every platform they picked in step 3 has a row in `apps/home/data/connections.json` in a final status: `connected` with a `checked` date from this setup, `export-only`, `no-connector` or `needs-attention`, none left as `not-connected` except a platform they have no account on yet (note "No account yet"). A `connected` one still reads now (one small read).
+- [ ] Every platform they picked in step 3 has a row in `apps/home/data/connections.json` in a final status: `connected` with a `checked` date from this setup, `export-only`, `no-connector`, `waiting` (with `waitingOn` and the one thing still to do in `note`) or `needs-attention`, none left as `not-connected` except a platform they have no account on yet (note "No account yet"). A `connected` one still reads now (one small read).
+- [ ] `context/goal.md` has their goal with the numbers, or `setup/progress.md` says why not.
 
 ## 2. A weekly plan (their choice)
 
@@ -63,7 +64,7 @@ Check that `list_scheduled_tasks` shows exactly one weekly plan task for this fo
 
 ## 3. Hand over
 
-Give them a plain summary with real numbers from their own plan, never an example. For instance:
+Start with their goal, in one line: what they want to achieve (from `context/goal.md`) and that everything here is set up to help with it. Then give them a plain summary with real numbers from their own plan, never an example. For instance:
 
 > Here's where you are. You're planning on Instagram, LinkedIn and Facebook. I've planned 6 posts for the next 2 weeks: 3 are written and waiting for your approval, and 3 need something from you first (2 photos and a video). People are searching most for "how much does a patio cost", and 2 of your competitors do well with before and after photos, so that's where I've started. I've saved what I learned as a skill of your own.
 
@@ -77,6 +78,11 @@ Then tell them, briefly:
 - That they can say "get the latest version" any time and you will bring the app up to date, keeping everything of theirs.
 - **Their platforms**, one line each: which you connected, which can be read from an export, and which have no account yet.
 - **The weekly plan**, if they chose it: the day and time it runs.
+- **Anything still waiting.** Every `waiting` connection with the one thing to do next: "LinkedIn is waiting on your Claude Owner to add it. When they have, press Finish connecting on Home, or tell me, and I'll read it then."
+- **Files you said you'd share.** Any still `to find` in `setup/progress.md`, by name.
+- **Joining up the rest.** If anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link next to each one.
+
+Then offer the 10-minute "how to use Claude day to day" lesson from `setup/learn-as-you-go.md`, in every guide mode. If they say no, tell them they can say "show me how to use Claude" any time.
 
 ## 4. Mark setup complete
 

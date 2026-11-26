@@ -2,10 +2,13 @@
 
 Goal: you know what the business sells, the problems it solves for customers, what makes it different, who its customers are and where it works, and you have 3 to 5 themes to plan posts around. **Agentic Content Machine can't research or plan without this.** It's what you search for, what you write about and how you tell a useful post from a generic one. So this step is required: setup doesn't go past it until questions 1 to 3 are answered.
 
+First, follow `setup/first-questions.md` if it isn't done yet (its first paragraph says how to tell; step 1 usually does it, but when Agentic Content Machine is added to another tool's folder this step can come first). Don't ask again for anything it found or they confirmed.
+
 ## 1. Work it out first
 
 The person shouldn't start from a blank page. Before asking anything, quietly gather what you can:
 
+- What you found and they confirmed in `setup/first-questions.md` (section 3), and their goal in `context/goal.md`.
 - `context/business.md`, now filled in from step 1. Reuse it. Never ask something it already answers.
 - Their **website**, if you can read web pages: services, who it's for, the town, case studies, how they describe themselves.
 - Their public pages and posts, if they gave you a link in step 1.
